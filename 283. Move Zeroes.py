@@ -4,7 +4,8 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         ori_len = len(nums)
-        nums.remove(0)
+        while 0 in nums:
+            nums.remove(0)
         after_len = len(nums)
         zero_num = ori_len - after_len
         nums.extend(zero_num*[0])
